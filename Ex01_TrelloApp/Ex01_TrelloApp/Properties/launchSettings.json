@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Ex01_TrelloApp": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
