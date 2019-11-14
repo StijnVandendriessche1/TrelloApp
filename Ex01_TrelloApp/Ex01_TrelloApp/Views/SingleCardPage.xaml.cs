@@ -2,7 +2,9 @@
 using Ex01_TrelloApp.Repositories;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,8 +35,20 @@ namespace Ex01_TrelloApp.Views
         {
             TrelloMember tm = await TrelloRepository.GetMemberDataAsync(this.Card);
             lblFullName.Text = tm.FullName;
+            
+
+            //imgAvatar.Source = tm.AvatarImg;
+
+            //HttpClient client = new HttpClient();
+            //Stream stream = await client.GetStreamAsync(tm.AvatarImg);
+            //imgAvatar.Source = ImageSource.FromStream(() => stream);
+
+            imgAvatar.Source = new UriImageSource()
+            {
+                Uri = new Uri(tm.gravatarHash),
+                CachingEnabled = false
+            };
             lblUsername.Text = tm.UserName;
-            imgAvatar.Source = tm.AvatarImg;
         }
 
         public SingleCardPage(TrelloList l)

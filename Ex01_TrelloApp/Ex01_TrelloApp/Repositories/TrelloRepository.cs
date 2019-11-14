@@ -10,8 +10,8 @@ namespace Ex01_TrelloApp.Repositories
 {
     public static class TrelloRepository
     {
-        private const string _APIKEY = "801a459f2295dd4333b290c52a86d6c0";
-        private const string _USERTOKEN = "ad7f7991b87384d49ebfba6b28ab4e1293bb774f13b5b0628123565cfa7105d9";
+        private const string _APIKEY = "";
+        private const string _USERTOKEN = "";
         private static HttpClient GetHttpClient()
         {
             HttpClient httpClient = new HttpClient();

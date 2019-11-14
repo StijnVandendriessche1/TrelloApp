@@ -9,6 +9,6 @@ namespace Ex01_TrelloApp.Models
         //full name ('FullName'), de username ('UserName') en de avatar hash ('AvatarImg')
         public String FullName { get; set; }
         public String UserName { get; set; }
-        public String AvatarImg { get; set; }
+        public String gravatarHash { get; set; }
     }
 }
